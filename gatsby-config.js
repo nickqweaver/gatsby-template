@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Gatby TS Starter`,
+    description: `This starter is ready for typescript.`,
+    author: `@nickqweaver`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -15,6 +15,21 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-ts`,
+      options: {
+        tsLoader: {
+          logLevel: "warn",
+        },
+        forkTsCheckerPlugin: {
+          eslint: true,
+        },
+        fileName: `types/graphql-types.ts`,
+        codegen: true,
+        codegenDelay: 250,
+        alwaysCheck: false,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
