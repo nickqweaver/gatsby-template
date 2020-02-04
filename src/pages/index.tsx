@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import { IndexPageQuery } from "../../types/graphql-types"
 import { Image } from "../app/designSystem/atoms/image/image"
 
+/* graphql types are created with codegen. In order to work you must name your queries */
 interface IIndexPageQueryProps {
   data: IndexPageQuery
   location: Location
